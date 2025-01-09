@@ -1,0 +1,61 @@
+isme application ko hm jest se nahi , vitest se test krege kyuki ye ek new framework hai jisme ESM (ecmascript) module support hai + typescript support hai + jsx support hai which not in jest...
+
+// Setting the vitest;
+
+npm i -D vitest
+
+edit package.json file scripts
+
+"test" : "vitest",
+"test:ui": "vitest --ui",
+
+// Now make tests folder and write your test files in it;
+
+// Now install one extension called "vitest snippet";
+ 
+ iv : is the short form which comes by that extension => for import things from vitest framework;
+
+ d for describe group
+ i for writing it code
+ now we write our assertions like expect(1).toBeTruthy();
+
+// now we have to run the tests
+
+in terminal => npm test
+for test:ui => npm run test:ui
+it ask for installation and we do y and then again run same command ko ru so it take us to the browser window and test show krega
+
+
+// Setting react testing library;
+
+npm i -D @testing-library/react
+npm i -D jsdom (testing enviourment)
+
+make file vitest.config.ts in the root directory means vite.config.ts ke nivhe ani chaiye ok
+
+then we have to setup our testing enviourment;
+
+import {defineConfig} from "vitest/config";
+export default defineConfig({
+    test:{
+        enviourment:"jsdom"
+    }
+});
+
+run again our test:ui
+
+
+The @testing-library/jest-dom library provides a set of custom jest matchers that you can use to extend jest. These will make your tests more declarative, clear to read and to maintain.
+
+
+//what to test?
+we have to test the logic like how they behave and render not the styles and other things; 
+//testing rendering?
+//testing user interface?
+//working with component libs?
+//techniques to simplify test?
+//Catching issue with ESlint
+
+
+
+// react testing-library docs dekho
