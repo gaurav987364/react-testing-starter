@@ -20,4 +20,4 @@ describe('Greet', () => {
         expect(button).toBeInTheDocument(); // vo heading me hai ya nhi
         expect(button).toHaveTextContent(/login/i); // vo text me hai ya nhi
     })
-})
+});
